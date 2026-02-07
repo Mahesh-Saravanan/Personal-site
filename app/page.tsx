@@ -685,7 +685,10 @@ export default function Home() {
                 </button>
 
                 {/* Scrollable Content */}
-                <div className="overflow-y-auto">
+                <div
+                  className="overflow-y-auto"
+                  data-lenis-prevent
+                >
                   {/* Hero Image */}
                   <div className="relative w-full h-64 md:h-80">
                     <Image
@@ -773,7 +776,10 @@ export default function Home() {
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
               </button>
 
-              <div className="flex items-center justify-center bg-black">
+              <div
+                className="flex items-center justify-center bg-black"
+                data-lenis-prevent
+              >
                 {selectedMedia.toLowerCase().endsWith('.mp4') ? (
                   <video controls autoPlay className="max-h-[85vh] w-full">
                     <source src={selectedMedia} type="video/mp4" />
@@ -810,6 +816,7 @@ export default function Home() {
               <div
                 className="relative w-full max-w-5xl max-h-[90vh] flex flex-col items-center"
                 onClick={(e) => e.stopPropagation()}
+                data-lenis-prevent
               >
                 <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-black">
                   <Image
