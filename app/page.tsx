@@ -92,6 +92,7 @@ export default function Home() {
   const [showContactOptions, setShowContactOptions] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const milestones = [
     { id: 1, title: "Best Paper Award — ICDD, Romania", desc: "Research, recognized." },
@@ -137,12 +138,21 @@ export default function Home() {
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
     e.preventDefault();
+    setIsMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offset = 80; // height of the navbar
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   };
-
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-red-100 overflow-x-hidden">
       {/* Navigation */}
@@ -169,13 +179,45 @@ export default function Home() {
             >
               Resume
             </a>
-            {/* Mobile Menu Button Placeholder */}
-            <button className="md:hidden p-2 text-gray-600">
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-gray-600 hover:text-red-600 transition-colors"
+            >
               <span className="sr-only">Open menu</span>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+              {isMobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+              )}
             </button>
           </div>
         </div>
+
+        {/* Mobile menu, show/hide based on menu state. */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden bg-white border-b border-gray-100 overflow-hidden"
+            >
+              <div className="px-6 py-6 space-y-4">
+                {sections.map((section) => (
+                  <Link
+                    key={section.name}
+                    href={`#${section.id}`}
+                    onClick={(e) => handleScroll(e, section.id)}
+                    className="block text-base font-medium text-gray-600 hover:text-red-600 transition-colors"
+                  >
+                    {section.name}
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
       <main className="pt-24 w-full overflow-hidden" onClick={() => setIsNavVisible(false)}>
