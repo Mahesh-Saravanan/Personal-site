@@ -1,0 +1,52 @@
+INSTRUCTIONS:
+--------------------------------------------------------------------------------
+1. This file contains sections for each of your 7 projects.
+2. Write or paste your detailed "About the Project" content under each project's header.
+3. You can also list filenames for gallery images if you have them (e.g., "Gallery: image1.png, image2.png").
+4. Once you are done editing this file, save it and tell me "I have updated the project descriptions".
+5. I will then automatically update your website with the new text!
+--------------------------------------------------------------------------------
+
+PROJECT 1: Deskbot
+------------------
+DeskBot is a personal physical assistant designed to move with you, interact with you, and support you in everyday life. It can walk alongside you, respond to voice commands, and act as a playful companion. When you are away, it becomes a smart surveillance bot, navigating through your home and keeping an eye on things using its onboard camera. On your desk, it transforms into a compact companion that can charge your phone and assist with daily tasks. Built to be helpful, interactive, and always evolving.
+
+
+PROJECT 2: Off-Road Buggy Racing
+--------------------------------
+SAE Baja is a global off-road racing competition where teams design, build, and race a single-seater buggy across extreme terrains. With the team of 23-member, I led on the complete journey of building an off-road vehicle from concept to competition, competing against more than 200 teams worldwide.
+Over a year-long development cycle, the project moved through detailed design, simulation, fabrication, and intensive testing. The vehicle was engineered using SolidWorks for design and Ansys, Adams, and Lotus software for structural and dynamic evaluation. After clearing the design validation stage, we built the complete buggy in four months, followed by two months of race-grade testing.
+At the national event in Chandigarh, Punjab, we competed in multiple formats, including an eight-hour endurance race. We finished in the top ten, secured second place in maneuverability, and ranked fourth in suspension and traction — a proud result of teamwork, persistence, and engineering discipline.
+
+PROJECT 3: Vaegan Autonomous Vehicle
+------------------------------------
+[Paste your 'About' content here]
+This project, developed as my bachelor’s thesis at Anna University, focused on building a complete ecosystem for an autonomous shuttle service within a college campus. The goal was to create a self-driven vehicle that could safely transport users to their destinations while providing a smooth and simple user experience.
+The system was built on a retrofitted TVS ES electric scooter, redesigned to support autonomous navigation. A hub motor powered by lithium-ion batteries provided propulsion, while custom-designed hardware enabled steering, braking, and speed control. The vehicle followed a white guiding line laid on campus roads, using a Pixy image sensor for real-time path detection. Sensor data was processed onboard to control steering through a stepper motor-driven gear mechanism, while braking was handled using servo motor actuation. Speed was regulated using a potentiometer-based control system.
+Beyond vehicle automation, the project also included a full software layer for user interaction. A barcode-based login system was developed, backed by an SQL database and a locally hosted web interface within the university network. A Bluetooth barcode scanner enabled quick user authentication, while a smart parking gate ensured proper vehicle docking and safety. Together, these components formed a complete, functional prototype of a campus-scale autonomous mobility service.
+
+PROJECT 4: Reinforcement Learning Mobile Bot
+--------------------------------------------
+This project focuses on building an autonomous mobile robot that learns to navigate through complex indoor environments using reinforcement learning. The hardware platform is based on the Nvidia JetRacer Pro, equipped with a Slamtec RPLidar A3 360-degree sensor mounted using a custom 3D-printed bracket, and an Intel D435i depth camera for obstacle detection. The system runs on Linux with the Robot Operating System (ROS) as middleware, enabling seamless communication between sensors, control logic, and actuators.
+To enable safe and efficient training, a custom Python-based simulator was developed using Pygame, replicating the real floor plan of the university building. The simulator generates realistic LiDAR data based on the robot’s position and orientation, allowing accurate perception and navigation learning before deployment.
+The driving policy is learned using a Double Deep Q-Network (DDQN) framework, formulated as a Markov Decision Process. The trained model predicts optimal steering actions from LiDAR observations, which are then transferred to the physical robot. Careful hardware calibration ensures smooth and reliable real-world execution, bridging the gap between simulation and reality.
+
+PROJECT 5: Display Tuning Robot
+-------------------------------
+This project focuses on building a mobile robotic system for automated calibration and validation of large-scale, tile-based Laser Phosphor Displays developed by Prysm Inc. The robot is equipped with a high-resolution Nikon digital camera and a scientific imaging camera, enabling precise detection and measurement of visual defects across ultra-wide 225-inch display surfaces.
+The system automates critical tuning processes such as power balancing, seam blending, and Mura correction. Power balancing ensures uniform brightness across tiles, seam blending aligns overlapping regions for seamless visuals, and Mura correction addresses fine pixel-level non-uniformities. By replacing human visual inspection with camera-based measurement, the system accurately quantifies defects and triggers corrections on a tile-by-tile basis, significantly reducing manual effort and improving consistency.
+Mounted on a precision mobile platform with multi-axis actuation, the robot can scan displays in three directions, enabling both calibration and validation. 
+Due to confidentiality agreements and NDA restrictions, further technical details cannot be disclosed.
+
+
+PROJECT 6: Rental Bikes Business Simulator
+------------------------------------------
+This project models the real-world operations of a Mobility as a Service (MaaS) company that provides rental electric scooters for daily commuting. The simulator recreates the complete business workflow over a defined time period, enabling detailed analysis of both operational efficiency and financial performance.
+The system is based on a city-wide fleet of electric scooters distributed across multiple rental stations in Coimbatore, India. Users can rent a scooter from any station and return it to another, while a dedicated operations team, known as Wingmen, dynamically redistributes vehicles between stations based on real-time demand and availability. The simulator tracks and optimizes this reshuffling process to ensure high service availability with minimal operational effort.
+In addition, the platform monitors key cost drivers, including charging cycles, power consumption, maintenance, and overall expenditure, while simultaneously tracking revenue. By integrating real-world data such as station locations, travel distances, and traffic conditions, the simulator identifies cost leaks, suggests optimal station placement, and determines the ideal fleet size. This allows data-driven decisions that improve service coverage, reduce idle time, and enhance overall business efficiency.
+
+PROJECT 7: Black Jack Learning Agent
+------------------------------------
+This project explores the design of a self-learning Blackjack player using reinforcement learning principles based on a Markov Decision Process. The complete game environment was developed in Python, with learning driven by a Q-learning framework. The goal was to study how strategy evolves over time and how different rules and hyperparameters influence decision-making and win rates.
+The simulator closely follows standard Blackjack rules inspired by Beat the Dealer, including card counting strategies. The agent learns an optimal policy through interaction with the environment, where each state is defined by the player’s hand value and the dealer’s visible card. At every step, the agent chooses between two actions — hit or stick — and receives a reward based on the game outcome.
+Learning is guided by a Q-table that stores state–action values and is updated using Bellman’s equation. Training was carried out over 100,000 simulated games, balancing exploration and exploitation using an epsilon-greedy approach. The final model achieved a win rate of 44%, closely matching skilled human-level play and demonstrating effective learning under uncertainty.
