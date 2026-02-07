@@ -138,21 +138,17 @@ export default function Home() {
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
     e.preventDefault();
+    e.stopPropagation();
     setIsMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80; // height of the navbar
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 10);
   };
+
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-red-100 overflow-x-hidden">
       {/* Navigation */}
@@ -161,14 +157,14 @@ export default function Home() {
           <div className="flex-1"></div>
           <div className="hidden md:flex items-center gap-8 justify-center">
             {sections.map((section) => (
-              <Link
+              <a
                 key={section.name}
                 href={`#${section.id}`}
                 onClick={(e) => handleScroll(e, section.id)}
-                className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors"
+                className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors cursor-pointer"
               >
                 {section.name}
-              </Link>
+              </a>
             ))}
           </div>
           <div className="flex-1 flex justify-end items-center gap-4">
@@ -205,14 +201,14 @@ export default function Home() {
             >
               <div className="px-6 py-6 space-y-4">
                 {sections.map((section) => (
-                  <Link
+                  <a
                     key={section.name}
                     href={`#${section.id}`}
                     onClick={(e) => handleScroll(e, section.id)}
-                    className="block text-base font-medium text-gray-600 hover:text-red-600 transition-colors"
+                    className="block text-base font-medium text-gray-600 hover:text-red-600 transition-colors cursor-pointer"
                   >
                     {section.name}
-                  </Link>
+                  </a>
                 ))}
               </div>
             </motion.div>
@@ -241,12 +237,20 @@ export default function Home() {
               A product developer turning curious thoughts into products with passion.
             </p>
             <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
-              <Link href="#contact" className="px-8 py-3.5 rounded-full bg-red-600 text-white font-semibold hover:bg-red-700 transition shadow-lg shadow-red-200">
+              <a
+                href="#contact"
+                onClick={(e) => handleScroll(e, "contact")}
+                className="px-8 py-3.5 rounded-full bg-red-600 text-white font-semibold hover:bg-red-700 transition shadow-lg shadow-red-200 cursor-pointer"
+              >
                 Let&apos;s Talk
-              </Link>
-              <Link href="#portfolio" className="px-8 py-3.5 rounded-full border border-gray-200 bg-white text-gray-900 font-semibold hover:bg-gray-50 transition">
+              </a>
+              <a
+                href="#portfolio"
+                onClick={(e) => handleScroll(e, "portfolio")}
+                className="px-8 py-3.5 rounded-full border border-gray-200 bg-white text-gray-900 font-semibold hover:bg-gray-50 transition cursor-pointer"
+              >
                 View Work
-              </Link>
+              </a>
             </div>
           </div>
 
