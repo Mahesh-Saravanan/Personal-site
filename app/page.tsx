@@ -113,7 +113,7 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      if (currentScrollY > lastScrollY && currentScrollY > 100 && !isMobileMenuOpen) {
         setIsNavVisible(false);
       } else {
         setIsNavVisible(true);
@@ -134,7 +134,7 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, isMobileMenuOpen]);
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
     e.preventDefault();
@@ -220,7 +220,10 @@ export default function Home() {
         </AnimatePresence>
       </nav>
 
-      <main className="pt-24 w-full overflow-hidden" onClick={() => setIsNavVisible(false)}>
+      <main className="pt-24 w-full overflow-hidden" onClick={() => {
+        setIsNavVisible(false);
+        setIsMobileMenuOpen(false);
+      }}>
         {/* Hero Section */}
         <section className="min-h-[85vh] flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 max-w-7xl mx-auto px-4 sm:px-6">
           {/* Left Side: Text */}
