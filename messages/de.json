@@ -1,0 +1,165 @@
+{
+    "Navigation": {
+        "about": "Über mich",
+        "experience": "Beruflicher Werdegang",
+        "education": "Akademischer Werdegang",
+        "portfolio": "Portfolio",
+        "skills": "Tech-Stack",
+        "testimonials": "Empfehlungen",
+        "contact": "Kontakt",
+        "resume": "Lebenslauf"
+    },
+    "Hero": {
+        "greeting": "Hallo",
+        "name_prefix": "Ich bin",
+        "name_highlight": "Mahesh",
+        "name_suffix": "Saravanan",
+        "description": "Ein Produktentwickler, der neugierige Gedanken mit Leidenschaft in Produkte verwandelt.",
+        "cta_primary": "Lass uns reden",
+        "cta_secondary": "Arbeit ansehen"
+    },
+    "About": {
+        "title": "Über mich",
+        "content_p1": "Ich arbeite gerne im Bereich Engineering und Technologie, besonders dort, wo Wissenschaft auf Kreativität trifft. Von wissenschaftlicher Bildgebung bis hin zu maschinellem Lernen und Computer Vision baue ich gerne Lösungen, die sowohl intelligent als auch praktisch sind. Oft begleite ich Ideen vom Konzept bis zum fertigen Produkt und kümmere mich um Design, Entwicklung und Fertigung.",
+        "content_p2": "Wenn ich nicht baue, finden Sie mich beim 3D-Modellieren, Experimentieren mit Elektronik oder beim Einfangen des Nachthimmels durch Astrofotografie 😉. Neugier treibt meine Arbeit an, und Lernen prägt meinen Weg.",
+        "cta": "Interessiert an dem, was ich gebaut habe?"
+    },
+    "Projects": {
+        "title": "Ausgewählte Projekte",
+        "subtitle": "Wischen, um meine Arbeit zu erkunden",
+        "items": {
+            "deskbot": {
+                "title": "Deskbot",
+                "description": "Hallo Welt!",
+                "about": "DeskBot ist ein persönlicher physischer Assistent, der sich mit Ihnen bewegt, mit Ihnen interagiert und Sie im Alltag unterstützt. Er kann neben Ihnen hergehen, auf Sprachbefehle reagieren und als spielerischer Begleiter fungieren. Wenn Sie weg sind, wird er zu einem intelligenten Überwachungsroboter, der durch Ihr Zuhause navigiert und mit seiner integrierten Kamera alles im Blick behält. Auf Ihrem Schreibtisch verwandelt er sich in einen kompakten Begleiter, der Ihr Telefon aufladen und bei täglichen Aufgaben helfen kann. Gebaut, um hilfreich, interaktiv und immer in Weiterentwicklung zu sein."
+            },
+            "buggy": {
+                "title": "Off-Road Buggy Racing",
+                "description": "Schlamm, Geschwindigkeit und pure Ingenieurskunst!",
+                "about": "SAE Baja ist ein globaler Offroad-Rennwettbewerb, bei dem Teams einen Einsitzer-Buggy für extremes Gelände entwerfen, bauen und fahren. Mit einem 23-köpfigen Team leitete ich die komplette Reise des Baus eines Offroad-Fahrzeugs vom Konzept bis zum Wettbewerb und trat gegen mehr als 200 Teams weltweit an.\n\nÜber einen einjährigen Entwicklungszyklus durchlief das Projekt detailliertes Design, Simulation, Fertigung und intensives Testen. Das Fahrzeug wurde mit SolidWorks konstruiert und mit Ansys, Adams und Lotus-Software auf strukturelle und dynamische Eigenschaften geprüft. Nach Bestehen der Designvalidierungsphase bauten wir den kompletten Buggy in vier Monaten, gefolgt von zwei Monaten Testen auf Rennniveau.\n\nBei der nationalen Veranstaltung in Chandigarh, Punjab, traten wir in mehreren Formaten an, darunter ein achtstündiges Ausdauerrennen. Wir landeten unter den Top Ten, sicherten uns den zweiten Platz in der Manövrierfähigkeit und belegten den vierten Platz in Federung und Traktion – ein stolzes Ergebnis von Teamarbeit, Ausdauer und Ingenieursdisziplin."
+            },
+            "vaegan": {
+                "title": "Vaegan Autonomes Fahrzeug",
+                "description": "Einfach sitzen und entspannen",
+                "about": "Dieses Projekt, das als meine Bachelorarbeit an der Anna University entwickelt wurde, konzentrierte sich auf den Aufbau eines kompletten Ökosystems für einen autonomen Shuttleservice auf einem Hochschulcampus. Ziel war es, ein selbstfahrendes Fahrzeug zu schaffen, das Benutzer sicher an ihr Ziel transportieren kann und dabei ein reibungsloses und einfaches Benutzererlebnis bietet.\n\nDas System basierte auf einem nachgerüsteten TVS ES Elektroroller, der für die autonome Navigation umgestaltet wurde. Ein Nabenmotor, der von Lithium-Ionen-Batterien angetrieben wurde, sorgte für den Antrieb, während speziell entwickelte Hardware Lenkung, Bremsen und Geschwindigkeitsregelung ermöglichte. Das Fahrzeug folgte einer weißen Führungslinie auf den Campusstraßen und nutzte einen Pixy-Bildsensor zur Echtzeit-Pfaderkennung. Sensordaten wurden an Bord verarbeitet, um die Lenkung über einen Schrittmotor-Getriebemechanismus zu steuern, während das Bremsen durch Servomotorbetätigung erfolgte. Die Geschwindigkeit wurde über ein potentiometerbasiertes Steuersystem geregelt.\n\nNeben der Fahrzeugautomatisierung umfasste das Projekt auch eine vollständige Softwareschicht für die Benutzerinteraktion. Ein Barcode-basiertes Anmeldesystem wurde entwickelt, das durch eine SQL-Datenbank und eine lokal gehostete Weboberfläche im Universitätsnetzwerk unterstützt wurde. Ein Bluetooth-Barcodescanner ermöglichte eine schnelle Benutzerauthentifizierung, während ein intelligentes Parktor für das ordnungsgemäße Andocken und die Sicherheit des Fahrzeugs sorgte. Zusammen bildeten diese Komponenten einen vollständigen, funktionalen Prototyp eines autonomen Mobilitätsdienstes im Campus-Maßstab."
+            },
+            "rl_bot": {
+                "title": "Reinforcement Learning Mobile Bot",
+                "description": "Lernen durch Belohnung.",
+                "about": "Dieses Projekt konzentriert sich auf den Bau eines autonomen mobilen Roboters, der lernt, durch komplexe Innenräume mit Reinforcement Learning zu navigieren. Die Hardwareplattform basiert auf dem Nvidia JetRacer Pro, ausgestattet mit einem Slamtec RPLidar A3 360-Grad-Sensor, der mit einer benutzerdefinierten 3D-gedruckten Halterung montiert ist, und einer Intel D435i Tiefenkamera zur Hinderniserkennung. Das System läuft unter Linux mit dem Robot Operating System (ROS) als Middleware und ermöglicht eine nahtlose Kommunikation zwischen Sensoren, Steuerlogik und Aktuatoren.\n\nUm ein sicheres und effizientes Training zu ermöglichen, wurde ein benutzerdefinierter Python-basiertes Simulator mit Pygame entwickelt, der den realen Grundriss des Universitätsgebäudes nachbildet. Der Simulator generiert realistische LiDAR-Daten basierend auf der Position und Orientierung des Roboters und ermöglicht so genaues Wahrnehmungs- und Navigationslernen vor dem Einsatz.\n\nDie Fahrstrategie wird unter Verwendung eines Double Deep Q-Network (DDQN)-Frameworks gelernt, das als Markov-Entscheidungsprozess formuliert ist. Das trainierte Modell sagt optimale Lenkaktionen aus LiDAR-Beobachtungen voraus, die dann auf den physischen Roboter übertragen werden. Eine sorgfältige Hardwarekalibrierung gewährleistet eine reibungslose und zuverlässige Ausführung in der realen Welt und überbrückt die Lücke zwischen Simulation und Realität."
+            },
+            "display_tuning": {
+                "title": "Display Tuning Roboter",
+                "description": "Bitte lächeln…",
+                "about": "Dieses Projekt konzentriert sich auf den Bau eines mobilen Robotersystems zur automatisierten Kalibrierung und Validierung von großformatigen, kachelbasierten Laser-Phosphor-Displays, die von Prysm Inc. entwickelt wurden. Der Roboter ist mit einer hochauflösenden Nikon-Digitalkamera und einer wissenschaftlichen Bildkamera ausgestattet, die eine präzise Erkennung und Messung visueller Defekte auf ultrabreiten 225-Zoll-Displayoberflächen ermöglichen.\n\nDas System automatisiert kritische Tuning-Prozesse wie Leistungsausgleich, Nahtverblendung und Mura-Korrektur. Der Leistungsausgleich sorgt für gleichmäßige Helligkeit über die Kacheln, die Nahtverblendung richtet überlappende Bereiche für nahtlose Bilder aus, und die Mura-Korrektur beseitigt feine Ungleichmäßigkeiten auf Pixelebene. Durch den Ersatz der menschlichen Sichtprüfung durch kamerabasierte Messungen quantifiziert das System Defekte genau und löst Korrekturen auf Kachelebene aus, was den manuellen Aufwand erheblich reduziert und die Konsistenz verbessert.\n\nMontiert auf einer präzisen mobilen Plattform mit mehrachsiger Betätigung kann der Roboter Displays in drei Richtungen scannen und ermöglicht so sowohl Kalibrierung als auch Validierung.\n\nAufgrund von Vertraulichkeitsvereinbarungen und NDA-Beschränkungen können keine weiteren technischen Details bekannt gegeben werden."
+            },
+            "rental_bikes": {
+                "title": "Mietfahrrad-Geschäftssimulator",
+                "description": "Eine Fahrt gefällig?",
+                "about": "Dieses Projekt modelliert den realen Betrieb eines Mobility as a Service (MaaS)-Unternehmens, das Miet-Elektroroller für das tägliche Pendeln anbietet. Der Simulator bildet den kompletten Geschäftsablauf über einen definierten Zeitraum nach und ermöglicht eine detaillierte Analyse sowohl der betrieblichen Effizienz als auch der finanziellen Leistung.\n\nDas System basiert auf einer stadtweiten Flotte von Elektrorollern, die auf mehrere Mietstationen in Coimbatore, Indien, verteilt sind. Benutzer können einen Roller an jeder Station mieten und an einer anderen zurückgeben, während ein engagiertes Betriebsteam, bekannt als Wingmen, Fahrzeuge basierend auf Echtzeitnachfrage und Verfügbarkeit dynamisch zwischen den Stationen umverteilt. Der Simulator verfolgt und optimiert diesen Umverteilungsprozess, um eine hohe Serviceverfügbarkeit mit minimalem Betriebsaufwand sicherzustellen.\n\nDarüber hinaus überwacht die Plattform wichtige Kostentreiber, einschließlich Ladezyklen, Energieverbrauch, Wartung und Gesamtausgaben, während sie gleichzeitig die Einnahmen verfolgt. Durch die Integration realer Daten wie Stationsstandorte, Reisedistanzen und Verkehrsbedingungen identifiziert der Simulator Kostenlecks, schlägt optimale Stationsplatzierungen vor und bestimmt die ideale Flottengröße. Dies ermöglicht datengestützte Entscheidungen, die die Serviceabdeckung verbessern, Leerlaufzeiten reduzieren und die gesamte Geschäftseffizienz steigern."
+            },
+            "blackjack": {
+                "title": "Black Jack Lernagent",
+                "description": "Wetten, dass? Nur ein Scherz!",
+                "about": "Dieses Projekt untersucht das Design eines selbstlernenden Blackjack-Spielers unter Verwendung von Reinforcement-Learning-Prinzipien auf der Grundlage eines Markov-Entscheidungsprozesses. Die komplette Spielumgebung wurde in Python entwickelt, wobei das Lernen durch ein Q-Learning-Framework gesteuert wurde. Ziel war es zu untersuchen, wie sich Strategien im Laufe der Zeit entwickeln und wie unterschiedliche Regeln und Hyperparameter die Entscheidungsfindung und Gewinnraten beeinflussen.\n\nDer Simulator folgt eng den Standard-Blackjack-Regeln, inspiriert von Beat the Dealer, einschließlich Kartenzählstrategien. Der Agent lernt eine optimale Strategie durch Interaktion mit der Umgebung, wobei jeder Zustand durch den Handwert des Spielers und die sichtbare Karte des Dealers definiert ist. Bei jedem Schritt wählt der Agent zwischen zwei Aktionen – Hit oder Stick – und erhält eine Belohnung basierend auf dem Spielergebnis.\n\nDas Lernen wird von einer Q-Tabelle geleitet, die Zustands-Aktions-Werte speichert und unter Verwendung der Bellman-Gleichung aktualisiert wird. Das Training wurde über 100.000 simulierte Spiele durchgeführt, wobei Exploration und Exploitation mit einem Epsilon-Greedy-Ansatz ausgeglichen wurden. Das endgültige Modell erreichte eine Gewinnrate von 44%, was dem Spiel auf dem Niveau eines erfahrenen Menschen sehr nahe kommt und effektives Lernen unter Unsicherheit demonstriert."
+            }
+        },
+        "gallery": "Galerie",
+        "about_project": "Über das Projekt"
+    },
+    "Experience": {
+        "title": "Karriereweg",
+        "director": {
+            "role": "Direktor",
+            "company": "Vaegan Hosting and Development Services",
+            "location": "Chennai, Indien",
+            "period": "2026 – Heute",
+            "description": ""
+        },
+        "tech_lead": {
+            "role": "Technischer Leiter",
+            "company": "Ice Apple Technology Solutions",
+            "location": "Chennai, Indien",
+            "period": "2025 – Heute",
+            "description": "Vorantreiben fortschrittlicher Display-Kalibrierungslösungen in Zusammenarbeit mit Prysm Inc. (USA) für Laser-Phosphor-Display-Systeme. Entwurf kamerabasierter Tuning-Pipelines, die klassische Bildverarbeitung und Deep Learning kombinieren, um optische Verzerrungen und Moiré-Muster zu reduzieren. Entwicklung automatisierter Qualitätsinspektionssysteme und einer robotergestützten Kalibrierungsplattform zur Verbesserung von Präzision, Wiederholbarkeit und Effizienz der Arbeitsabläufe in der Fabrik."
+        },
+        "freelance": {
+            "role": "Machine Learning Entwickler (Freiberuflich)",
+            "company": "Unabhängiger Berater",
+            "location": "",
+            "period": "2024",
+            "description": "Aufbau einer End-to-End Deep-Learning-Pipeline zur Vorhersage von Anämie und Hämoglobinwerten im Blut unter Verwendung medizinischer Bilder von Bindehaut, Nägeln und Handflächen. Entwurf von Trainings-Workflows, die eine kontinuierliche Modellverbesserung und Robustheit gegen Datendrift unterstützen."
+        },
+        "research_assistant": {
+            "role": "Forschungsassistent",
+            "company": "Center for Artificial Intelligence and Robotics, THWS",
+            "location": "Würzburg, Deutschland",
+            "period": "2023 – 2024",
+            "description": "Entwicklung automatisierter multimodaler Datenerfassungspipelines für Roboterexperimente, gefolgt von strukturierter ETL-Verarbeitung und Datenbankspeicherung. Durchführung statistischer Analysen und Feature Engineering, Bereitstellung klarer Erkenntnisse durch interaktive Dashboards und visuelle Berichte."
+        }
+    },
+    "Education": {
+        "title": "Akademischer Werdegang",
+        "masters": {
+            "degree": "Master in Künstlicher Intelligenz",
+            "institution": "Technische Hochschule Würzburg-Schweinfurt, Deutschland • 2022 - 2023"
+        },
+        "bachelors": {
+            "degree": "Bachelor in Maschinenbau",
+            "institution": "KPR Institute of Engineering and Technology, Coimbatore, Indien • 2017 - 2021"
+        }
+    },
+    "Milestones": {
+        "title": "Durch die Linse",
+        "subtitle": "Momentaufnahmen wichtiger Momente und Erfolge.",
+        "items": {
+            "1": {
+                "title": "Auszeichnung für das beste Papier — ICDD, Rumänien",
+                "desc": "Forschung, anerkannt."
+            },
+            "2": {
+                "title": "Abschlussfeier — Bachelor in Maschinenbau",
+                "desc": "Wo die Reise begann."
+            },
+            "3": {
+                "title": "Abschlussfeier — Master in Künstlicher Intelligenz",
+                "desc": "Leidenschaft in Bestimmung verwandeln."
+            },
+            "4": {
+                "title": "IISF — National First, Autonomes Fahrzeug",
+                "desc": "Innovation in Bewegung."
+            },
+            "5": {
+                "title": "Ausdauer-Offroad-Rennen — Nach dem Ziel",
+                "desc": "Staub, Schweiß und Lächeln — wir feiern monatelange Anstrengungen beim Überqueren der Ziellinie."
+            },
+            "6": {
+                "title": "Anerkennung der Arbeit",
+                "desc": "Momente, die zählen."
+            }
+        }
+    },
+    "TechStack": {
+        "title": "Tech-Stack",
+        "subtitle": "Werkzeuge und Technologien, die ich nutze, um Ideen zum Leben zu erwecken"
+    },
+    "Testimonials": {
+        "title": "Bewertungen & Empfehlungen",
+        "subtitle": "Was Kollegen und Partner über unsere Arbeit sagen",
+        "pascal": {
+            "name": "Prof. Dr.-Ing. Pascal Meißner",
+            "role": "Forschungsprofessor, CAIRO, THWS.",
+            "content": "Während seiner Anstellung zeigte Herr Saravanan stets außergewöhnliche Professionalität und Fähigkeiten und erfüllte alle Anforderungen und Erwartungen. Sein proaktiver Ansatz, gepaart mit seiner Fähigkeit, sich schnell in neue Bereiche einzuarbeiten, war wirklich lobenswert. Sein tiefes Verständnis für Datenhandling und Programmiertechniken ermöglichte es ihm, bedeutende technische Beiträge zu unseren Projekten zu leisten."
+        },
+        "magda": {
+            "name": "Prof. Dr. Magda Gregorová",
+            "role": "Leiterin von CAIRO, THWS",
+            "content": "Herr Saravanan lieferte dank seiner methodischen und effizienten Arbeitsmoral stets qualitativ hochwertige Arbeit. Er war nicht nur eine wertvolle Bereicherung für seine Vorgesetzten, sondern auch ein kooperativer und unterstützender Partner für seine Kollegen."
+        }
+    },
+    "Contact": {
+        "title": "Kontakt aufnehmen",
+        "subtitle": "Haben Sie etwas im Sinn? Ein Projekt, eine Frage oder einfach nur eine gute Idee - lassen Sie uns reden.",
+        "cta": "Hallo sagen"
+    }
+}

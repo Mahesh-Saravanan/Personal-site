@@ -1,0 +1,165 @@
+{
+    "Navigation": {
+        "about": "About Me",
+        "experience": "Professional Journey",
+        "education": "Academic Journey",
+        "portfolio": "Portfolio",
+        "skills": "Tech stack",
+        "testimonials": "Testimonials",
+        "contact": "Contact",
+        "resume": "Resume"
+    },
+    "Hero": {
+        "greeting": "Hello there",
+        "name_prefix": "I'm",
+        "name_highlight": "Mahesh",
+        "name_suffix": "Saravanan",
+        "description": "A product developer turning curious thoughts into products with passion.",
+        "cta_primary": "Let's Talk",
+        "cta_secondary": "View Work"
+    },
+    "About": {
+        "title": "About Me",
+        "content_p1": "I enjoy working across engineering and technology, especially where science meets creativity. From scientific imaging to machine learning and computer vision, I like building solutions that are both smart and practical. I often take ideas from concept to a complete product, handling design, development, and manufacturing.",
+        "content_p2": "When I am not building, you will find me modeling in 3D, experimenting with electronics, or capturing the night sky through astrophotography😉. Curiosity drives my work, and learning shapes my journey.",
+        "cta": "Interested in what I’ve built?"
+    },
+    "Projects": {
+        "title": "Featured Projects",
+        "subtitle": "Swipe to explore my work",
+        "items": {
+            "deskbot": {
+                "title": "Deskbot",
+                "description": "Hello World!",
+                "about": "DeskBot is a personal physical assistant designed to move with you, interact with you, and support you in everyday life. It can walk alongside you, respond to voice commands, and act as a playful companion. When you are away, it becomes a smart surveillance bot, navigating through your home and keeping an eye on things using its onboard camera. On your desk, it transforms into a compact companion that can charge your phone and assist with daily tasks. Built to be helpful, interactive, and always evolving."
+            },
+            "buggy": {
+                "title": "Off-Road Buggy Racing",
+                "description": "Mud, speed, and pure engineering!",
+                "about": "SAE Baja is a global off-road racing competition where teams design, build, and race a single-seater buggy across extreme terrains. With the team of 23-member, I led on the complete journey of building an off-road vehicle from concept to competition, competing against more than 200 teams worldwide.\n\nOver a year-long development cycle, the project moved through detailed design, simulation, fabrication, and intensive testing. The vehicle was engineered using SolidWorks for design and Ansys, Adams, and Lotus software for structural and dynamic evaluation. After clearing the design validation stage, we built the complete buggy in four months, followed by two months of race-grade testing.\n\nAt the national event in Chandigarh, Punjab, we competed in multiple formats, including an eight-hour endurance race. We finished in the top ten, secured second place in maneuverability, and ranked fourth in suspension and traction — a proud result of teamwork, persistence, and engineering discipline."
+            },
+            "vaegan": {
+                "title": "Vaegan Autonomous Vehicle",
+                "description": "Just sit and relax",
+                "about": "This project, developed as my bachelor’s thesis at Anna University, focused on building a complete ecosystem for an autonomous shuttle service within a college campus. The goal was to create a self-driven vehicle that could safely transport users to their destinations while providing a smooth and simple user experience.\n\nThe system was built on a retrofitted TVS ES electric scooter, redesigned to support autonomous navigation. A hub motor powered by lithium-ion batteries provided propulsion, while custom-designed hardware enabled steering, braking, and speed control. The vehicle followed a white guiding line laid on campus roads, using a Pixy image sensor for real-time path detection. Sensor data was processed onboard to control steering through a stepper motor-driven gear mechanism, while braking was handled using servo motor actuation. Speed was regulated using a potentiometer-based control system.\n\nBeyond vehicle automation, the project also included a full software layer for user interaction. A barcode-based login system was developed, backed by an SQL database and a locally hosted web interface within the university network. A Bluetooth barcode scanner enabled quick user authentication, while a smart parking gate ensured proper vehicle docking and safety. Together, these components formed a complete, functional prototype of a campus-scale autonomous mobility service."
+            },
+            "rl_bot": {
+                "title": "Reinforcement Learning Mobile Bot",
+                "description": "Learning by rewards.",
+                "about": "This project focuses on building an autonomous mobile robot that learns to navigate through complex indoor environments using reinforcement learning. The hardware platform is based on the Nvidia JetRacer Pro, equipped with a Slamtec RPLidar A3 360-degree sensor mounted using a custom 3D-printed bracket, and an Intel D435i depth camera for obstacle detection. The system runs on Linux with the Robot Operating System (ROS) as middleware, enabling seamless communication between sensors, control logic, and actuators.\n\nTo enable safe and efficient training, a custom Python-based simulator was developed using Pygame, replicating the real floor plan of the university building. The simulator generates realistic LiDAR data based on the robot’s position and orientation, allowing accurate perception and navigation learning before deployment.\n\nThe driving policy is learned using a Double Deep Q-Network (DDQN) framework, formulated as a Markov Decision Process. The trained model predicts optimal steering actions from LiDAR observations, which are then transferred to the physical robot. Careful hardware calibration ensures smooth and reliable real-world execution, bridging the gap between simulation and reality."
+            },
+            "display_tuning": {
+                "title": "Display Tuning Robot",
+                "description": "Say cheese…",
+                "about": "This project focuses on building a mobile robotic system for automated calibration and validation of large-scale, tile-based Laser Phosphor Displays developed by Prysm Inc. The robot is equipped with a high-resolution Nikon digital camera and a scientific imaging camera, enabling precise detection and measurement of visual defects across ultra-wide 225-inch display surfaces.\n\nThe system automates critical tuning processes such as power balancing, seam blending, and Mura correction. Power balancing ensures uniform brightness across tiles, seam blending aligns overlapping regions for seamless visuals, and Mura correction addresses fine pixel-level non-uniformities. By replacing human visual inspection with camera-based measurement, the system accurately quantifies defects and triggers corrections on a tile-by-tile basis, significantly reducing manual effort and improving consistency.\n\nMounted on a precision mobile platform with multi-axis actuation, the robot can scan displays in three directions, enabling both calibration and validation.\n\nDue to confidentiality agreements and NDA restrictions, further technical details cannot be disclosed."
+            },
+            "rental_bikes": {
+                "title": "Rental Bikes Business Simulator",
+                "description": "Take a ride?",
+                "about": "This project models the real-world operations of a Mobility as a Service (MaaS) company that provides rental electric scooters for daily commuting. The simulator recreates the complete business workflow over a defined time period, enabling detailed analysis of both operational efficiency and financial performance.\n\nThe system is based on a city-wide fleet of electric scooters distributed across multiple rental stations in Coimbatore, India. Users can rent a scooter from any station and return it to another, while a dedicated operations team, known as Wingmen, dynamically redistributes vehicles between stations based on real-time demand and availability. The simulator tracks and optimizes this reshuffling process to ensure high service availability with minimal operational effort.\n\nIn addition, the platform monitors key cost drivers, including charging cycles, power consumption, maintenance, and overall expenditure, while simultaneously tracking revenue. By integrating real-world data such as station locations, travel distances, and traffic conditions, the simulator identifies cost leaks, suggests optimal station placement, and determines the ideal fleet size. This allows data-driven decisions that improve service coverage, reduce idle time, and enhance overall business efficiency."
+            },
+            "blackjack": {
+                "title": "Black Jack Learning Agent",
+                "description": "Wanna bet? Just kidding!",
+                "about": "This project explores the design of a self-learning Blackjack player using reinforcement learning principles based on a Markov Decision Process. The complete game environment was developed in Python, with learning driven by a Q-learning framework. The goal was to study how strategy evolves over time and how different rules and hyperparameters influence decision-making and win rates.\n\nThe simulator closely follows standard Blackjack rules inspired by Beat the Dealer, including card counting strategies. The agent learns an optimal policy through interaction with the environment, where each state is defined by the player’s hand value and the dealer’s visible card. At every step, the agent chooses between two actions — hit or stick — and receives a reward based on the game outcome.\n\nLearning is guided by a Q-table that stores state–action values and is updated using Bellman’s equation. Training was carried out over 100,000 simulated games, balancing exploration and exploitation using an epsilon-greedy approach. The final model achieved a win rate of 44%, closely matching skilled human-level play and demonstrating effective learning under uncertainty."
+            }
+        },
+        "gallery": "Gallery",
+        "about_project": "About the Project"
+    },
+    "Experience": {
+        "title": "Career Journey",
+        "director": {
+            "role": "Director",
+            "company": "Vaegan Hosting and Development Services",
+            "location": "Chennai, India",
+            "period": "2026 – Present",
+            "description": ""
+        },
+        "tech_lead": {
+            "role": "Technical Lead",
+            "company": "Ice Apple Technology Solutions",
+            "location": "Chennai, India",
+            "period": "2025 – Present",
+            "description": "Driving advanced display calibration solutions in collaboration with Prysm Inc. (USA) for Laser Phosphor Display systems. Designing camera-based tuning pipelines that combine classical image processing and deep learning to reduce optical distortions and Moiré patterns. Developing automated quality inspection systems and a robotic calibration platform to improve precision, repeatability, and factory workflow efficiency."
+        },
+        "freelance": {
+            "role": "Machine Learning Developer (Freelance)",
+            "company": "Independent Consultant",
+            "location": "",
+            "period": "2024",
+            "description": "Built an end-to-end deep learning pipeline to predict anemia and blood hemoglobin levels using medical images of conjunctiva, nails, and palms. Designed training workflows that support continuous model improvement and robustness against data drift."
+        },
+        "research_assistant": {
+            "role": "Research Assistant",
+            "company": "Center for Artificial Intelligence and Robotics, THWS",
+            "location": "Würzburg, Germany",
+            "period": "2023 – 2024",
+            "description": "Developed automated multimodal data collection pipelines for robotic experiments, followed by structured ETL processing and database storage. Performed statistical analysis and feature engineering, delivering clear insights through interactive dashboards and visual reports."
+        }
+    },
+    "Education": {
+        "title": "Academic Journey",
+        "masters": {
+            "degree": "Masters in Artificial Intelligence",
+            "institution": "Technical University of Applied Sciences Würzburg-Schweinfurt, Germany • 2022 - 2023"
+        },
+        "bachelors": {
+            "degree": "Bachelors in Mechanical Engineering",
+            "institution": "KPR Institute of Engineering and Technology, Coimbatore, India • 2017 - 2021"
+        }
+    },
+    "Milestones": {
+        "title": "Through the Lens",
+        "subtitle": "Snapshots of key moments and achievements.",
+        "items": {
+            "1": {
+                "title": "Best Paper Award — ICDD, Romania",
+                "desc": "Research, recognized."
+            },
+            "2": {
+                "title": "Convocation — Bachelor’s in Mechanical Engineering",
+                "desc": "Where the journey began."
+            },
+            "3": {
+                "title": "Convocation — Master’s in Artificial Intelligence",
+                "desc": "Turning passion into purpose."
+            },
+            "4": {
+                "title": "IISF — National First, Autonomous Vehicle",
+                "desc": "Innovation in motion."
+            },
+            "5": {
+                "title": "Endurance Off-Road Race — Post Finish",
+                "desc": "Dust, sweat, and smiles — celebrating months of effort crossing the finish line."
+            },
+            "6": {
+                "title": "Appreciation of Work",
+                "desc": "Moments that matter."
+            }
+        }
+    },
+    "TechStack": {
+        "title": "Tech Stack",
+        "subtitle": "Tools and technologies I use to bring ideas to life"
+    },
+    "Testimonials": {
+        "title": "Reviews & Testimonials",
+        "subtitle": "What colleagues and partners say about our work",
+        "pascal": {
+            "name": "Prof. Dr.-Ing. Pascal Meißner",
+            "role": "Research professor, CAIRO, THWS.",
+            "content": "Throughout his employment, Mr. Saravanan consistently demonstrated exceptional professionalism and skill, meeting all requirements and expectations. His proactive approach, coupled with his ability to quickly adapt to new areas, was truly commendable. His deep understanding of data handling and programming techniques allowed him to make significant technical contributions to our projects."
+        },
+        "magda": {
+            "name": "Prof. Dr. Magda Gregorová",
+            "role": "Head of CAIRO, THWS",
+            "content": "Mr. Saravanan consistently delivered high-quality work thanks to his methodical and efficient work ethic. He was not only a valuable asset to his superiors but also a collaborative and supportive partner to his colleagues."
+        }
+    },
+    "Contact": {
+        "title": "Get In Touch",
+        "subtitle": "Have something in mind? A project, a question, or just a good idea - let’s talk.",
+        "cta": "Say Hello"
+    }
+}
