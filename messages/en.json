@@ -69,15 +69,8 @@
     },
     "Experience": {
         "title": "Career Journey",
-        "director": {
-            "role": "Director",
-            "company": "Vaegan Hosting and Development Services",
-            "location": "Chennai, India",
-            "period": "2026 – Present",
-            "description": ""
-        },
         "tech_lead": {
-            "role": "Technical Lead",
+            "role": "Data Scientist",
             "company": "Ice Apple Technology Solutions",
             "location": "Chennai, India",
             "period": "2025 – Present",
@@ -91,7 +84,7 @@
             "description": "Built an end-to-end deep learning pipeline to predict anemia and blood hemoglobin levels using medical images of conjunctiva, nails, and palms. Designed training workflows that support continuous model improvement and robustness against data drift."
         },
         "research_assistant": {
-            "role": "Research Assistant",
+            "role": "Data Scientist",
             "company": "Center for Artificial Intelligence and Robotics, THWS",
             "location": "Würzburg, Germany",
             "period": "2023 – 2024",

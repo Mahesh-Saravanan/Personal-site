@@ -161,11 +161,7 @@ export default function Home() {
     };
 
     const careerJourney = [
-        {
-            key: 'director',
-            period: t('Experience.director.period'),
-            location: t('Experience.director.location'),
-        },
+
         {
             key: 'tech_lead',
             period: t('Experience.tech_lead.period'),

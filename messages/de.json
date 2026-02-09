@@ -69,15 +69,8 @@
     },
     "Experience": {
         "title": "Karriereweg",
-        "director": {
-            "role": "Direktor",
-            "company": "Vaegan Hosting and Development Services",
-            "location": "Chennai, Indien",
-            "period": "2026 – Heute",
-            "description": ""
-        },
         "tech_lead": {
-            "role": "Technischer Leiter",
+            "role": "Data Scientist",
             "company": "Ice Apple Technology Solutions",
             "location": "Chennai, Indien",
             "period": "2025 – Heute",
@@ -91,7 +84,7 @@
             "description": "Aufbau einer End-to-End Deep-Learning-Pipeline zur Vorhersage von Anämie und Hämoglobinwerten im Blut unter Verwendung medizinischer Bilder von Bindehaut, Nägeln und Handflächen. Entwurf von Trainings-Workflows, die eine kontinuierliche Modellverbesserung und Robustheit gegen Datendrift unterstützen."
         },
         "research_assistant": {
-            "role": "Forschungsassistent",
+            "role": "Data Scientist",
             "company": "Center for Artificial Intelligence and Robotics, THWS",
             "location": "Würzburg, Deutschland",
             "period": "2023 – 2024",
