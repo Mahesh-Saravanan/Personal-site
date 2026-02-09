@@ -14,7 +14,7 @@ export default function Home() {
     const pathname = usePathname();
 
     const toggleLanguage = () => {
-        const nextLocale = locale === 'en' ? 'de' : 'en';
+        const nextLocale = locale === 'en' ? 'de' : locale === 'de' ? 'ta' : 'en';
         router.replace({ pathname }, { locale: nextLocale });
     };
 
@@ -212,19 +212,11 @@ export default function Home() {
                             onClick={toggleLanguage}
                             className="flex items-center gap-2 px-3 py-1.5 rounded-full hover:bg-gray-100 transition-colors"
                         >
-                            {locale === 'en' ? (
-                                <>
-                                    <span className="font-bold text-gray-900">EN</span>
-                                    <span className="text-gray-400">/</span>
-                                    <span className="text-gray-500 hover:text-red-600">DE</span>
-                                </>
-                            ) : (
-                                <>
-                                    <span className="text-gray-500 hover:text-red-600">EN</span>
-                                    <span className="text-gray-400">/</span>
-                                    <span className="font-bold text-gray-900">DE</span>
-                                </>
-                            )}
+                            <span className={`transition-colors ${locale === 'en' ? 'font-bold text-gray-900' : 'text-gray-500 hover:text-red-600'}`}>EN</span>
+                            <span className="text-gray-400">/</span>
+                            <span className={`transition-colors ${locale === 'de' ? 'font-bold text-gray-900' : 'text-gray-500 hover:text-red-600'}`}>DE</span>
+                            <span className="text-gray-400">/</span>
+                            <span className={`transition-colors ${locale === 'ta' ? 'font-bold text-gray-900' : 'text-gray-500 hover:text-red-600'}`}>TA</span>
                         </button>
 
                         <a
