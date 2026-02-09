@@ -536,10 +536,9 @@ export default function Home() {
                         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">{t('TechStack.title')}</h2>
                         <p className="text-gray-500 text-center mb-16">{t('TechStack.subtitle')}</p>
 
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
                             {[
                                 { name: "Python", logo: "python.png" },
-                                { name: "C#", logo: "csharp.png" },
                                 { name: "TensorFlow", logo: "tensorflow.png" },
                                 { name: "PyTorch", logo: "pytorch.png" },
                                 { name: "OpenCV", logo: "opencv.png" },
@@ -547,9 +546,6 @@ export default function Home() {
                                 { name: "Autodesk", logo: "autodesk.png" },
                                 { name: "Ansys", logo: "ansys.png" },
                                 { name: "SolidWorks", logo: "solidworks.png" },
-                                { name: "MySQL", logo: "mysql.png" },
-                                { name: "Bash Scripting", logo: "bash.png" },
-                                { name: "ROS", logo: "ros.png" },
                             ].map((skill, idx) => (
                                 <motion.div
                                     key={skill.name}
