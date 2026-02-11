@@ -169,13 +169,13 @@ export default function Home() {
         },
         {
             label: "Phone",
-            href: "tel:+919787330275",
+            href: "tel:+919787332075",
             icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />,
-            desc: "+91 9787330275"
+            desc: "+91 9787332075"
         },
         {
             label: "WhatsApp",
-            href: "https://wa.me/919787330275",
+            href: "https://wa.me/919787332075",
             icon: <path d="M13.601 2.326A7.854 7.854 0 1 0 7.926 15.75l-4.326 1.341 1.4-4.22a7.84 7.84 0 0 0 .601-10.545zM8.3 14.1a6.3 6.3 0 1 1 3.2-12.08 6.3 6.3 0 0 1-3.2 12.08z" fill="currentColor" />,
             desc: "Chat Now",
             isWhatsApp: true
