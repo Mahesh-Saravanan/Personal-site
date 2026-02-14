@@ -154,5 +154,13 @@
         "title": "Get In Touch",
         "subtitle": "Have something in mind? A project, a question, or just a good idea - let’s talk.",
         "cta": "Say Hello"
+    },
+    "Languages": {
+        "title": "I can communicate in",
+        "items": {
+            "english": "English",
+            "german": "German",
+            "tamil": "Tamil"
+        }
     }
 }

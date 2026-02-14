@@ -154,5 +154,13 @@
         "title": "Kontakt aufnehmen",
         "subtitle": "Haben Sie etwas im Sinn? Ein Projekt, eine Frage oder einfach nur eine gute Idee - lassen Sie uns reden.",
         "cta": "Hallo sagen"
+    },
+    "Languages": {
+        "title": "Ich kann kommunizieren in",
+        "items": {
+            "english": "Englisch",
+            "german": "Deutsch",
+            "tamil": "Tamil"
+        }
     }
 }

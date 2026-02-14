@@ -176,9 +176,9 @@ export default function Home() {
         {
             label: "WhatsApp",
             href: "https://wa.me/919787332075",
-            icon: <path d="M13.601 2.326A7.854 7.854 0 1 0 7.926 15.75l-4.326 1.341 1.4-4.22a7.84 7.84 0 0 0 .601-10.545zM8.3 14.1a6.3 6.3 0 1 1 3.2-12.08 6.3 6.3 0 0 1-3.2 12.08z" fill="currentColor" />,
-            desc: "Chat Now",
-            isWhatsApp: true
+            iconImage: "/tech-stack/wapp2.png",
+            iconImageFooter: "/tech-stack/wapp5.png",
+            desc: "Chat Now"
         },
         {
             label: "Instagram",
@@ -494,6 +494,45 @@ export default function Home() {
                     </div>
                 </section>
 
+                {/* Language Skills */}
+                <section id="languages" className="py-24">
+                    <div className="max-w-4xl mx-auto px-6">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">{t('Languages.title')}</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {[
+                                { key: 'tamil', level: 6, max: 6 },
+                                { key: 'english', level: 5, max: 6 },
+                                { key: 'german', level: 4, max: 6 },
+                            ].map((lang, idx) => (
+                                <motion.div
+                                    key={lang.key}
+                                    initial={{ opacity: 0, y: 20, scale: 0.98 }}
+                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                    whileHover={{ scale: 1.03 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: idx * 0.1 }}
+                                    className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:bg-red-600 hover:border-red-600 transition-all group"
+                                >
+                                    <h3 className="text-xl font-bold text-gray-900 mb-6 text-center group-hover:text-white transition-colors">
+                                        {t(`Languages.items.${lang.key}`)}
+                                    </h3>
+                                    <div className="flex justify-center gap-2">
+                                        {[...Array(lang.max)].map((_, i) => (
+                                            <div
+                                                key={i}
+                                                className={`w-3 h-3 rounded-full transition-colors ${i < lang.level
+                                                    ? 'bg-red-600 group-hover:bg-white'
+                                                    : 'bg-gray-200 group-hover:bg-white/30'
+                                                    }`}
+                                            />
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* Through the Lens */}
                 <section id="milestones" className="py-24 bg-gray-50">
                     <div className="max-w-7xl mx-auto px-6">
@@ -536,7 +575,7 @@ export default function Home() {
                         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">{t('TechStack.title')}</h2>
                         <p className="text-gray-500 text-center mb-16">{t('TechStack.subtitle')}</p>
 
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                             {[
                                 { name: "Python", logo: "python.png" },
                                 { name: "TensorFlow", logo: "tensorflow.png" },
@@ -546,6 +585,8 @@ export default function Home() {
                                 { name: "Autodesk", logo: "autodesk.png" },
                                 { name: "Ansys", logo: "ansys.png" },
                                 { name: "SolidWorks", logo: "solidworks.png" },
+                                { name: "Azure", logo: "azure.png" },
+                                { name: "ROS", logo: "ROS.png" },
                             ].map((skill, idx) => (
                                 <motion.div
                                     key={skill.name}
@@ -685,9 +726,19 @@ export default function Home() {
                                                 className="flex-1 min-w-[140px] max-w-[190px] p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors group"
                                             >
                                                 <div className="text-red-500 mb-2 flex justify-center">
-                                                    <svg className="w-6 h-6" fill={link.isWhatsApp || link.label === "LinkedIn" || link.label === "GitHub" ? "currentColor" : "none"} stroke={link.isWhatsApp || link.label === "LinkedIn" || link.label === "GitHub" ? "none" : "currentColor"} viewBox="0 0 24 24" strokeWidth={2}>
-                                                        {link.icon}
-                                                    </svg>
+                                                    {link.iconImage ? (
+                                                        <Image
+                                                            src={link.iconImage}
+                                                            alt={link.label}
+                                                            width={24}
+                                                            height={24}
+                                                            className="object-contain"
+                                                        />
+                                                    ) : (
+                                                        <svg className="w-6 h-6" fill={link.label === "LinkedIn" || link.label === "GitHub" ? "currentColor" : "none"} stroke={link.label === "LinkedIn" || link.label === "GitHub" ? "none" : "currentColor"} viewBox="0 0 24 24" strokeWidth={2}>
+                                                            {link.icon}
+                                                        </svg>
+                                                    )}
                                                 </div>
                                                 <h3 className="font-bold text-sm mb-1">{link.label}</h3>
                                                 <p className="text-gray-400 text-[10px] break-all">{link.desc}</p>
@@ -794,6 +845,48 @@ export default function Home() {
                     )}
                 </AnimatePresence>
 
+                {/* Milestone Lightbox */}
+                <AnimatePresence>
+                    {selectedMilestone && (
+                        <div
+                            className="fixed inset-0 z-[110] flex items-center justify-center bg-black/95 backdrop-blur-md animate-fade-in"
+                            onClick={() => setSelectedMilestone(null)}
+                        >
+                            {/* Close Button */}
+                            <button
+                                className="absolute top-6 right-6 z-30 p-3 bg-black/40 hover:bg-black/60 rounded-full text-white/90 hover:text-white transition-all backdrop-blur-sm border border-white/10"
+                                onClick={() => setSelectedMilestone(null)}
+                            >
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                            </button>
+
+                            <div
+                                className="relative w-full h-full flex items-center justify-center p-4 md:p-10"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <div className="relative w-full h-full max-w-7xl max-h-[90vh]">
+                                    <Image
+                                        src={`/milestones/${selectedMilestone.id}.png`}
+                                        alt={selectedMilestone.title}
+                                        fill
+                                        className="object-contain"
+                                    />
+
+                                    {/* Text Overlay */}
+                                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent pt-20 pb-10 px-6 md:px-10 text-center flex flex-col items-center justify-end pointer-events-none">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 shadow-sm">{selectedMilestone.title}</h3>
+                                        {selectedMilestone.desc && (
+                                            <p className="text-gray-200 text-base md:text-lg max-w-2xl text-shadow-sm">
+                                                {selectedMilestone.desc}
+                                            </p>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </AnimatePresence>
+
                 {/* Media Lightbox (Click to Enlarge) */}
                 {selectedMedia && (
                     <div
@@ -846,9 +939,19 @@ export default function Home() {
                             className="text-gray-400 hover:text-red-600 transition-colors"
                             aria-label={link.label}
                         >
-                            <svg className="w-6 h-6" fill={link.isWhatsApp || link.label === "LinkedIn" || link.label === "GitHub" ? "currentColor" : "none"} stroke={link.isWhatsApp || link.label === "LinkedIn" || link.label === "GitHub" ? "none" : "currentColor"} viewBox="0 0 24 24" strokeWidth={2}>
-                                {link.icon}
-                            </svg>
+                            {link.iconImageFooter || link.iconImage ? (
+                                <Image
+                                    src={link.iconImageFooter || link.iconImage}
+                                    alt={link.label}
+                                    width={24}
+                                    height={24}
+                                    className="object-contain"
+                                />
+                            ) : (
+                                <svg className="w-6 h-6" fill={link.label === "LinkedIn" || link.label === "GitHub" ? "currentColor" : "none"} stroke={link.label === "LinkedIn" || link.label === "GitHub" ? "none" : "currentColor"} viewBox="0 0 24 24" strokeWidth={2}>
+                                    {link.icon}
+                                </svg>
+                            )}
                         </a>
                     ))}
                 </div>
